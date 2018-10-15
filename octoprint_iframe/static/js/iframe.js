@@ -12,7 +12,6 @@ $(function () {
     // have been retrieved from the OctoPrint backend and thus the SettingsViewModel been properly populated.
     self.onBeforeBinding = function() {
       self.currentUrl(self.settings.settings.plugins.iframe.url());
-      self.goToUrl();
     }
   }
 
@@ -28,6 +27,6 @@ $(function () {
     ["settingsViewModel"],
 
     // Finally, this is the list of all elements we want this view model to be bound to.
-    [document.getElementById("tab_plugin_iframe")]
+    ["#tab_plugin_iframe"]
   ]);
 });
