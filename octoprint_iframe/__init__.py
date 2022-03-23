@@ -2,6 +2,7 @@
 from __future__ import absolute_import
 
 import octoprint.plugin
+from octoprint.events import Events
 
 class iFramePlugin(octoprint.plugin.StartupPlugin,
                        octoprint.plugin.TemplatePlugin,
@@ -11,7 +12,8 @@ class iFramePlugin(octoprint.plugin.StartupPlugin,
 		self._logger.info("Set up and ready to go! (Default: %s)" % self._settings.get(["url"]))
 
 	def get_settings_defaults(self):
-		return dict(url="https://en.m.wikipedia.org/wiki/Hello_world")
+		return dict(url="http://en.m.wikipedia.org/wiki/Hello_world")
+		# return dict(url="http://192.168.0.148:8000/")
 
 	def get_template_configs(self):
 		return [
@@ -25,5 +27,18 @@ class iFramePlugin(octoprint.plugin.StartupPlugin,
 			less=["less/iframe.less"]
 		)
 
+__plugin_pythoncompat__ = ">=2.7,<4"  # python 2 and 3
+
 __plugin_name__ = "iFrame"
 __plugin_implementation__ = iFramePlugin()
+
+
+
+def __plugin_load__():
+    global __plugin_implementation__
+    __plugin_implementation__ = iFramePlugin()
+
+    global __plugin_hooks__
+    __plugin_hooks__ = {
+        "octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
+    }

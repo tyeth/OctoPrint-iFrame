@@ -4,30 +4,30 @@
 ### Do not forget to adjust the following variables to your own plugin.
 
 # The plugin's identifier, has to be unique
-plugin_identifier = "iframe"
+plugin_identifier = "iframe_tyeth"
 
 # The plugin's python package, should be "octoprint_<plugin identifier>", has to be unique
-plugin_package = "octoprint_iframe"
+plugin_package = "octoprint_iframe_tyeth"
 
 # The plugin's human readable name. Can be overwritten within OctoPrint's internal data via __plugin_name__ in the
 # plugin module
-plugin_name = "OctoPrint-iFrame"
+plugin_name = "OctoPrint-iFrame-Tyeth"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
-plugin_version = "0.2"
+plugin_version = "0.3"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
 plugin_description = "A simple plugin to embed a webpage in a tab"
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
-plugin_author = "Leo Herzog"
+plugin_author = "Leo Herzog,Tyeth"
 
 # The plugin's author's mail address.
-plugin_author_email = "octopi@herzog.tech"
+plugin_author_email = "tyethgundry+octoprint@gmail.com"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/xd1936/OctoPrint-iFrame"
+plugin_url = "https://github.com/tyeth/OctoPrint-iFrame"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"
